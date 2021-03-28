@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TpServlet</display-name>
+  <filter>
+  <filter-name>FiltreAutorisation</filter-name> 
+  <filter-class>package1.FiltreAutorisation</filter-class> 
+</filter>
+
+<filter-mapping>
+<filter-name>FiltreAutorisation</filter-name> 
+<servlet-name>CommanderUnDisque</servlet-name>
+</filter-mapping>
+
+    <servlet>
+ <servlet-name>AfficherLesDisques</servlet-name>
+ <servlet-class>package1.AfficherLesDisques</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>AfficherLesDisques</servlet-name>
+ <url-pattern>/achat</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+ <servlet-name>CommanderUnDisque</servlet-name>
+ <servlet-class>package1.CommanderUnDisque</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>CommanderUnDisque</servlet-name>
+ <url-pattern>/commande</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>InscriptionClient</servlet-name>
+ <servlet-class>package1.InscriptionClient</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>InscriptionClient</servlet-name>
+ <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>EnregistrerCommande</servlet-name>
+ <servlet-class>package1.EnregistrerCommande</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>EnregistrerCommande</servlet-name>
+ <url-pattern>/enregistre</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+ <servlet-name>ViderPanier</servlet-name>
+ <servlet-class>package1.ViderPanier</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>ViderPanier</servlet-name>
+ <url-pattern>/vider</url-pattern>
+</servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
